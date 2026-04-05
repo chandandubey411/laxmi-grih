@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans text-gray-800 bg-gray-50 antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading text-[#0B1B3D];
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #0B1B3D;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #D4AF37;
+  }
+}
+
+@layer components {
+  /* Section label pattern */
+  .section-label {
+    @apply text-secondary font-bold uppercase tracking-widest text-sm mb-3 block;
+  }
+
+  /* Gold underline divider */
+  .gold-divider {
+    @apply w-16 h-1 bg-secondary mt-2 mb-6;
+  }
+
+  /* Primary button */
+  .btn-primary {
+    @apply px-8 py-3 bg-primary text-white font-semibold rounded hover:bg-secondary hover:text-primary transition-all duration-300 shadow-md hover:shadow-lg;
+  }
+
+  /* Secondary button  */
+  .btn-secondary {
+    @apply px-8 py-3 bg-secondary text-primary font-semibold rounded hover:bg-white hover:text-primary transition-all duration-300 shadow-md hover:shadow-lg;
+  }
+
+  /* Card base */
+  .card {
+    @apply bg-white rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 border border-gray-100;
+  }
+}
