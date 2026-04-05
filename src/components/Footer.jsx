@@ -84,7 +84,7 @@ const Footer = () => {
               <h3 className="font-heading font-semibold text-lg text-white mt-6 mb-2 pb-1">Property Types</h3>
               <div className="w-10 h-0.5 bg-secondary mb-5" />
               <div className="flex flex-wrap gap-2">
-                {["Villa", "Flat", "Plot", "Duplex", "Penthouse"].map((t) => (
+                {["House", "Flat", "Plot"].map((t) => (
                   <span key={t} className="text-xs text-gray-300 border border-white/20 px-2.5 py-1 rounded-full hover:border-secondary hover:text-secondary transition-colors cursor-default">
                     {t}
                   </span>
@@ -136,7 +136,7 @@ const Footer = () => {
               © {new Date().getFullYear()} LaxmiGrih Properties Pvt. Ltd. All Rights Reserved.
             </p>
             <p className="text-gray-600 text-xs">
-              Serving Delhi NCR — Noida · Ghaziabad · Greater Noida · Indirapuram
+              Serving Patna &amp; Bihar — Ramkrishan Nagar · Kankarbagh · Boring Road · Bailey Road · Rajgir
             </p>
           </div>
         </div>

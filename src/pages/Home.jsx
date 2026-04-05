@@ -40,13 +40,13 @@ const Home = () => {
                 className="inline-flex items-center gap-2 bg-secondary/20 border border-secondary/40 text-secondary font-semibold uppercase tracking-widest text-xs px-4 py-2 rounded-full mb-6"
               >
                 <span className="w-2 h-2 bg-secondary rounded-full animate-pulse" />
-                Premium Real Estate — Delhi NCR
+                Trusted Real Estate — Patna, Bihar
               </motion.span>
 
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-white leading-tight mb-6">
                 Find Your{" "}
                 <span className="text-secondary italic">Dream Home</span>{" "}
-                in Delhi NCR
+                in Patna &amp; Rajgir
               </h1>
               <p className="text-lg text-gray-300 mb-10 max-w-xl leading-relaxed">
                 We guide you towards the perfect investment, combining luxury, comfort, and unmatched transparency to help you secure a future for your family.
@@ -131,7 +131,7 @@ const Home = () => {
               </h2>
               <div className="gold-divider" />
               <p className="text-gray-600 text-base leading-relaxed mb-6">
-                LaxmiGrih Properties Pvt. Ltd. represents the highest standards of the real estate industry. Whether you are looking for an exquisite family villa, a modern apartment, or a lucrative plot for investment, we dedicate ourselves to matching you with options that exceed your expectations.
+                LaxmiGrih Properties Pvt. Ltd. represents the highest standards of the real estate industry in Bihar. Whether you are looking for a spacious family house, a modern flat, or a prime plot for investment in Patna or Rajgir, we dedicate ourselves to matching you with options that exceed your expectations.
               </p>
               <Link to="/about" className="inline-flex items-center gap-2 text-primary font-bold hover:text-secondary transition-colors group w-fit">
                 Read More About Us
@@ -188,7 +188,7 @@ const Home = () => {
               { icon: <FaShieldAlt />, title: "Trusted & Verified", desc: "Every property listing undergoes rigorous legal verification and background checks." },
               { icon: <FaHandshake />, title: "Transparent Deals", desc: "No hidden costs. Complete transparency throughout the transaction process." },
               { icon: <FaUserTie />, title: "Expert Guidance", desc: "Our seasoned real estate advisors offer tailored solutions for your unique needs." },
-              { icon: <FaRegSmile />, title: "Customer First", desc: "A track record of happy families and high-return investments across the NCR region." },
+              { icon: <FaRegSmile />, title: "Customer First", desc: "A growing community of satisfied families and smart investors across Patna and Rajgir, Bihar." },
             ].map((item, i) => (
               <motion.div
                 key={i}

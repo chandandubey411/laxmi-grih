@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const typeColors = {
-  Villa: "bg-emerald-500",
+  House: "bg-emerald-500",
   Flat: "bg-blue-500",
   Plot: "bg-amber-500",
 };
@@ -22,9 +22,9 @@ const PropertyCard = ({ property }) => {
         <div className={`absolute top-4 left-4 ${typeColors[property.type] || "bg-gray-600"} text-white font-bold px-3 py-1 rounded-full text-xs uppercase tracking-wider shadow-lg`}>
           {property.type}
         </div>
-        {/* Price Badge */}
-        <div className="absolute top-4 right-4 bg-primary/90 backdrop-blur-sm text-secondary font-bold px-3 py-1 rounded-full text-sm shadow-lg">
-          {property.price}
+        {/* Contact Badge */}
+        <div className="absolute top-4 right-4 bg-secondary/90 backdrop-blur-sm text-primary font-bold px-3 py-1 rounded-full text-xs shadow-lg uppercase tracking-wide">
+          Enquire
         </div>
         {/* Gradient Overlay */}
         <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-primary/80 via-primary/30 to-transparent p-4 pt-8">

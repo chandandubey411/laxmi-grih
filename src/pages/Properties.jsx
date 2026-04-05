@@ -6,34 +6,19 @@ import { FaFilter, FaTimes } from "react-icons/fa";
 
 const Properties = () => {
   const [filterType, setFilterType] = useState("All");
-  const [filterBudget, setFilterBudget] = useState("All");
   const [filterLocation, setFilterLocation] = useState("All");
 
-  const propertyTypes = ["All", "Flat", "Villa", "Plot"];
-  const locations = ["All", "Noida", "Ghaziabad", "Greater Noida", "Indirapuram", "Vaishali", "Vasundhara"];
-  const budgets = ["All", "Under 1 Cr", "1 Cr - 3 Cr", "Above 3 Cr"];
-
-  const parsePrice = (priceStr) => {
-    if (priceStr.includes("Cr")) return parseFloat(priceStr.replace(/[^0-9.]/g, "")) * 10000000;
-    if (priceStr.includes("Lacs")) return parseFloat(priceStr.replace(/[^0-9.]/g, "")) * 100000;
-    return 0;
-  };
+  const propertyTypes = ["All", "Flat", "House", "Plot"];
+  const locations = ["All", "Patna", "Ramkrishan Nagar", "Rajgir", "Kankarbagh", "Boring Road", "Bailey Road"];
 
   const filteredProperties = propertiesData.filter((item) => {
     const matchType = filterType === "All" || item.type === filterType;
     const matchLocation = filterLocation === "All" || item.location.includes(filterLocation);
-    let matchBudget = true;
-    if (filterBudget !== "All") {
-      const priceVal = parsePrice(item.price);
-      if (filterBudget === "Under 1 Cr") matchBudget = priceVal < 10000000;
-      if (filterBudget === "1 Cr - 3 Cr") matchBudget = priceVal >= 10000000 && priceVal <= 30000000;
-      if (filterBudget === "Above 3 Cr") matchBudget = priceVal > 30000000;
-    }
-    return matchType && matchLocation && matchBudget;
+    return matchType && matchLocation;
   });
 
-  const isFiltered = filterType !== "All" || filterBudget !== "All" || filterLocation !== "All";
-  const resetFilters = () => { setFilterType("All"); setFilterLocation("All"); setFilterBudget("All"); };
+  const isFiltered = filterType !== "All" || filterLocation !== "All";
+  const resetFilters = () => { setFilterType("All"); setFilterLocation("All"); };
 
   const FilterBtn = ({ label, active, onClick }) => (
     <button
@@ -59,7 +44,7 @@ const Properties = () => {
             <span className="section-label text-secondary justify-center flex">Exclusive Portfolio</span>
             <h1 className="text-4xl md:text-5xl font-heading font-bold text-white mb-4">Our Properties</h1>
             <p className="text-gray-300 max-w-2xl mx-auto text-lg">
-              Explore our curated selection of verified, premium properties in Delhi NCR — designed to meet your lifestyle and investment goals.
+              Explore our curated selection of verified properties in Patna &amp; Rajgir, Bihar — plots, flats, and houses tailored to your lifestyle and investment goals.
             </p>
           </motion.div>
         </div>
@@ -94,18 +79,6 @@ const Properties = () => {
               </div>
             </div>
 
-            <div className="hidden lg:block w-px h-12 bg-gray-200" />
-
-            {/* Budget */}
-            <div className="flex flex-col gap-2">
-              <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">💰 Budget</span>
-              <div className="flex flex-wrap gap-2">
-                {budgets.map((b) => (
-                  <FilterBtn key={b} label={b} active={filterBudget === b} onClick={() => setFilterBudget(b)} />
-                ))}
-              </div>
-            </div>
-
             {/* Reset */}
             {isFiltered && (
               <button
@@ -133,7 +106,7 @@ const Properties = () => {
           <AnimatePresence mode="wait">
             {filteredProperties.length > 0 ? (
               <motion.div
-                key={`${filterType}-${filterLocation}-${filterBudget}`}
+                key={`${filterType}-${filterLocation}`}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
