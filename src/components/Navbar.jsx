@@ -33,10 +33,13 @@ const Navbar = () => {
       {/* Top Strip */}
       <div className="hidden md:block bg-primary text-gray-300 text-xs py-2">
         <div className="container mx-auto px-4 flex justify-between items-center">
-          <span>📍 Indirapuram, Ghaziabad | Serving entire Delhi NCR</span>
+          <span>📍 Ramkrishan Nagar, Patna, Bihar</span>
           <div className="flex items-center gap-6">
             <a href="tel:8269505757" className="flex items-center gap-1.5 hover:text-secondary transition-colors">
               <FaPhoneAlt className="text-secondary" /> 8269505757
+            </a>
+            <a href="tel:9693728948" className="flex items-center gap-1.5 hover:text-secondary transition-colors">
+              <FaPhoneAlt className="text-secondary" /> 9693728948
             </a>
             <a href="mailto:Laxmigrihpropertiespvtltd@gmail.com" className="hover:text-secondary transition-colors">
               Laxmigrihpropertiespvtltd@gmail.com

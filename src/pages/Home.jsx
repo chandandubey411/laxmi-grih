@@ -45,8 +45,8 @@ const Home = () => {
 
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-white leading-tight mb-6">
                 Find Your{" "}
-                <span className="text-secondary italic">Dream Home</span>{" "}
-                in Patna &amp; Rajgir
+                <span className="text-secondary italic">Dream Plot & Home</span>{" "}
+                in Patna Bihar
               </h1>
               <p className="text-lg text-gray-300 mb-10 max-w-xl leading-relaxed">
                 We guide you towards the perfect investment, combining luxury, comfort, and unmatched transparency to help you secure a future for your family.

@@ -5,10 +5,17 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, FaClock } from "rea
 const contactDetails = [
   {
     icon: <FaPhoneAlt />,
-    title: "Phone",
+    title: "Phone 1",
     value: "8269505757",
     link: "tel:8269505757",
     linkLabel: "8269505757",
+  },
+  {
+    icon: <FaPhoneAlt />,
+    title: "Phone 2",
+    value: "9693728948",
+    link: "tel:9693728948",
+    linkLabel: "9693728948",
   },
   {
     icon: <FaEnvelope />,
@@ -132,15 +139,24 @@ const Contact = () => {
                 </motion.div>
               ))}
 
-              {/* WhatsApp Button */}
+              {/* WhatsApp Buttons */}
               <a
                 href="https://wa.me/918269505757"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2.5 w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 rounded-2xl transition-colors shadow-md hover:shadow-lg"
+                className="flex items-center justify-center gap-2.5 w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3.5 rounded-2xl transition-colors shadow-md hover:shadow-lg"
               >
                 <FaWhatsapp className="text-xl" />
-                Chat on WhatsApp
+                WhatsApp: 8269505757
+              </a>
+              <a
+                href="https://wa.me/919693728948"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2.5 w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3.5 rounded-2xl transition-colors shadow-md hover:shadow-lg"
+              >
+                <FaWhatsapp className="text-xl" />
+                WhatsApp: 9693728948
               </a>
             </motion.div>
 

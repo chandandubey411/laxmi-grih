@@ -110,6 +110,12 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
+                  <a href="tel:9693728948" className="flex items-center gap-3 text-gray-400 hover:text-secondary transition-colors text-sm group">
+                    <FaPhoneAlt className="text-secondary group-hover:scale-110 transition-transform" />
+                    9693728948
+                  </a>
+                </li>
+                <li>
                   <a href="mailto:Laxmigrihpropertiespvtltd@gmail.com" className="flex items-start gap-3 text-gray-400 hover:text-secondary transition-colors text-sm group">
                     <FaEnvelope className="text-secondary mt-0.5 shrink-0 group-hover:scale-110 transition-transform" />
                     <span className="break-all">Laxmigrihpropertiespvtltd@gmail.com</span>
@@ -117,14 +123,22 @@ const Footer = () => {
                 </li>
               </ul>
 
-              {/* WhatsApp CTA */}
+              {/* WhatsApp CTAs */}
               <a
                 href="https://wa.me/918269505757"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 flex items-center justify-center gap-2 w-full bg-green-600 hover:bg-green-500 text-white text-sm font-semibold py-2.5 rounded-xl transition-colors"
+                className="mt-4 flex items-center justify-center gap-2 w-full bg-green-600 hover:bg-green-500 text-white text-xs font-semibold py-2.5 rounded-xl transition-colors"
               >
-                <FaWhatsapp className="text-base" /> Chat on WhatsApp
+                <FaWhatsapp className="text-base" /> WhatsApp: 8269505757
+              </a>
+              <a
+                href="https://wa.me/919693728948"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 flex items-center justify-center gap-2 w-full bg-green-600 hover:bg-green-500 text-white text-xs font-semibold py-2.5 rounded-xl transition-colors"
+              >
+                <FaWhatsapp className="text-base" /> WhatsApp: 9693728948
               </a>
             </div>
 
