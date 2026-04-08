@@ -41,7 +41,7 @@ const contactDetails = [
 ];
 
 const Contact = () => {
-  const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
+  const [formData, setFormData] = useState({ name: "", email: "", phone: "", propertyIntent: "", message: "" });
   const [status, setStatus] = useState(null);
   const [resultMessage, setResultMessage] = useState("");
 
@@ -58,6 +58,7 @@ const Contact = () => {
     dataString.append("name", formData.name);
     dataString.append("email", formData.email);
     dataString.append("phone", formData.phone);
+    dataString.append("propertyIntent", formData.propertyIntent);
     dataString.append("message", formData.message);
     try {
       const response = await fetch("https://api.web3forms.com/submit", { method: "POST", body: dataString });
@@ -65,7 +66,7 @@ const Contact = () => {
       if (data.success) {
         setStatus("success");
         setResultMessage("Message sent successfully! Our team will contact you shortly.");
-        setFormData({ name: "", email: "", phone: "", message: "" });
+        setFormData({ name: "", email: "", phone: "", propertyIntent: "", message: "" });
       } else {
         setStatus("error");
         setResultMessage(data.message || "An error occurred while sending the message.");
@@ -194,6 +195,21 @@ const Contact = () => {
                     type="email" name="email" value={formData.email} onChange={handleInputChange} required
                     className={inputClass} placeholder="john@example.com"
                   />
+                </div>
+
+                <div>
+                  <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">I Want To *</label>
+                  <select
+                    name="propertyIntent"
+                    value={formData.propertyIntent}
+                    onChange={handleInputChange}
+                    required
+                    className={`${inputClass} cursor-pointer`}
+                  >
+                    <option value="" disabled>-- Select an Option --</option>
+                    <option value="Buy">🏠 Buy a Property</option>
+                    <option value="Sell">💰 Sell a Property</option>
+                  </select>
                 </div>
 
                 <div>
