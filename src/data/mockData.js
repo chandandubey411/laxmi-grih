@@ -1,8 +1,8 @@
 export const propertiesData = [
   {
     id: 1,
-    title: "Spacious 3BHK Flat in Laxmi-Grid",
-    location: "Laxmi-Grid, Ramkrishan Nagar, Patna",
+    title: "Spacious 3BHK Flat in Patna Bihar",
+    location: "Patna Bihar",
     type: "Flat",
     bedrooms: 3,
     bathrooms: 2,
@@ -12,8 +12,8 @@ export const propertiesData = [
   },
   {
     id: 2,
-    title: "Residential Plot in Ekta Vihar",
-    location: "Ekta Vihar Ln, Ramkrishan Nagar, Patna",
+    title: "Residential Plot in Patna Bihar",
+    location: "Patna Bihar",
     type: "Plot",
     bedrooms: 0,
     bathrooms: 0,
@@ -23,8 +23,8 @@ export const propertiesData = [
   },
   {
     id: 3,
-    title: "Independent House in Ramkrishan Nagar",
-    location: "Ramkrishan Nagar, Patna",
+    title: "Independent House in Patna Bihar",
+    location: "Patna Bihar",
     type: "House",
     bedrooms: 4,
     bathrooms: 3,
@@ -34,8 +34,8 @@ export const propertiesData = [
   },
   {
     id: 4,
-    title: "2BHK Flat Near Kankarbagh",
-    location: "Kankarbagh, Patna",
+    title: "2BHK Flat Near Patna Bihar",
+    location: "Patna Bihar",
     type: "Flat",
     bedrooms: 2,
     bathrooms: 2,
@@ -45,8 +45,8 @@ export const propertiesData = [
   },
   {
     id: 5,
-    title: "Corner Plot in Rajgir Township",
-    location: "Rajgir, Nalanda, Bihar",
+    title: "Corner Plot in Patna Bihar",
+    location: "Patna Bihar",
     type: "Plot",
     bedrooms: 0,
     bathrooms: 0,
@@ -56,8 +56,8 @@ export const propertiesData = [
   },
   {
     id: 6,
-    title: "Independent House in Rajgir",
-    location: "Rajgir, Nalanda, Bihar",
+    title: "Independent House in Patna Bihar",
+    location: "Patna Bihar",
     type: "House",
     bedrooms: 3,
     bathrooms: 2,
@@ -67,8 +67,8 @@ export const propertiesData = [
   },
   {
     id: 7,
-    title: "Premium 3BHK Flat in Boring Road",
-    location: "Boring Road, Patna",
+    title: "Premium 3BHK Flat in Patna Bihar",
+    location: "Patna Bihar",
     type: "Flat",
     bedrooms: 3,
     bathrooms: 3,
@@ -78,8 +78,8 @@ export const propertiesData = [
   },
   {
     id: 8,
-    title: "Residential Plot on Bailey Road",
-    location: "Bailey Road, Patna",
+    title: "Residential Plot on Patna Bihar",
+    location: "Patna Bihar",
     type: "Plot",
     bedrooms: 0,
     bathrooms: 0,
@@ -89,8 +89,8 @@ export const propertiesData = [
   },
   {
     id: 9,
-    title: "4BHK Independent House in Raja Bazar",
-    location: "Raja Bazar, Patna",
+    title: "4BHK Independent House in Patna Bihar",
+    location: "Patna Bihar",
     type: "House",
     bedrooms: 4,
     bathrooms: 3,

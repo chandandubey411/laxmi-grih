@@ -6,19 +6,15 @@ import { FaFilter, FaTimes } from "react-icons/fa";
 
 const Properties = () => {
   const [filterType, setFilterType] = useState("All");
-  const [filterLocation, setFilterLocation] = useState("All");
 
   const propertyTypes = ["All", "Flat", "House", "Plot"];
-  const locations = ["All", "Patna", "Ramkrishan Nagar", "Rajgir", "Kankarbagh", "Boring Road", "Bailey Road"];
 
   const filteredProperties = propertiesData.filter((item) => {
-    const matchType = filterType === "All" || item.type === filterType;
-    const matchLocation = filterLocation === "All" || item.location.includes(filterLocation);
-    return matchType && matchLocation;
+    return filterType === "All" || item.type === filterType;
   });
 
-  const isFiltered = filterType !== "All" || filterLocation !== "All";
-  const resetFilters = () => { setFilterType("All"); setFilterLocation("All"); };
+  const isFiltered = filterType !== "All";
+  const resetFilters = () => { setFilterType("All"); };
 
   const FilterBtn = ({ label, active, onClick }) => (
     <button
@@ -67,17 +63,7 @@ const Properties = () => {
               </div>
             </div>
 
-            <div className="hidden lg:block w-px h-12 bg-gray-200" />
 
-            {/* Location */}
-            <div className="flex flex-col gap-2">
-              <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">📍 Location</span>
-              <div className="flex flex-wrap gap-2">
-                {locations.map((l) => (
-                  <FilterBtn key={l} label={l} active={filterLocation === l} onClick={() => setFilterLocation(l)} />
-                ))}
-              </div>
-            </div>
 
             {/* Reset */}
             {isFiltered && (
@@ -106,7 +92,7 @@ const Properties = () => {
           <AnimatePresence mode="wait">
             {filteredProperties.length > 0 ? (
               <motion.div
-                key={`${filterType}-${filterLocation}`}
+                key={`${filterType}`}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
