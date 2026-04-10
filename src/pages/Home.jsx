@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FaShieldAlt, FaHandshake, FaUserTie, FaRegSmile, FaStar, FaHome, FaBuilding, FaChartLine } from "react-icons/fa";
 import PropertyCard from "../components/PropertyCard";
+import PopupForm from "../components/PopupForm";
 import { propertiesData, testimonialsData } from "../data/mockData";
 
 const stats = [
@@ -282,6 +283,9 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Auto Popup Form */}
+      <PopupForm />
 
     </div>
   );
